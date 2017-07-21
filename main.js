@@ -18,7 +18,8 @@ foodieApp.controller('mainController',function($scope) {
 	cuisines: 'Cafe, French',
 	cost:'700',
 	hours:'8 AM to 11 PM (Mon-Sun)',
-	
+	votes:'172',
+	reviews:'200',
 	image: 'https://goagrapevinedotcom.files.wordpress.com/2016/06/bv-2.jpg'
 },
 {
@@ -30,6 +31,8 @@ foodieApp.controller('mainController',function($scope) {
 	cuisines: 'Chinese, Thai',
 	cost: '600',
 	hours: '12 Noon to 1 AM (Mon-Sun)',
+	votes:'160',
+	reviews:'700',
 	image: 'https://tinyurl.com/y75bq4es'
 },
 {
@@ -41,6 +44,8 @@ foodieApp.controller('mainController',function($scope) {
 	cuisines: 'North Indian',
 	cost: '1000',
 	hours: '11:30 AM to 11 PM (Mon-Sun)',
+	votes:'152',
+	reviews:'160',
 	image: 'https://tinyurl.com/y8yv8pnv'
 },
 {
@@ -52,6 +57,8 @@ foodieApp.controller('mainController',function($scope) {
 	cuisines: 'Desserts',
 	cost: '300',
 	hours: '10 AM to 9 PM (Mon-Sun)',
+	votes:'220',
+	reviews:'580',
 	image: 'https://tinyurl.com/y9fjpwqy'
 },
 {
@@ -63,6 +70,8 @@ foodieApp.controller('mainController',function($scope) {
 	cuisines: 'Cafe, Italian, Mexican, Bakery',
 	cost: '1400',
 	hours: '11 AM to 11 PM (Mon-Sun)',
+		votes:'272',
+	reviews:'450',
 	image: 'https://tinyurl.com/y9uxhm89'
 },
 {
@@ -74,6 +83,8 @@ foodieApp.controller('mainController',function($scope) {
 	cuisines: 'Pizza, Fast Food',
 	cost: '700',
 	hours: '11 AM to 11 PM (Mon-Sun)',
+		votes:'197',
+	reviews:'247',
 	image: 'https://tinyurl.com/y766q8ll'
 },
 {
@@ -85,6 +96,8 @@ foodieApp.controller('mainController',function($scope) {
 	cuisines: 'North Indian, Chinese, Continental, Thai',
 	cost: '1500',
 	hours: '7 AM to 10 AM, 12 Noon to 3:30 PM, 7 PM to 11:30 PM',
+		votes:'453',
+	reviews:'345',
 	image: 'https://tinyurl.com/y739eosa'
 },
 {
@@ -96,6 +109,8 @@ foodieApp.controller('mainController',function($scope) {
 	cuisines: 'Chinese, North Indian',
 	cost: '700',
 	hours: '11 AM to 11 PM (Mon-Sun)',
+    votes:'332',
+	reviews:'140',
 	image: 'https://tinyurl.com/y7ax5h7h'
 }
 ]
