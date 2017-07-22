@@ -3,7 +3,9 @@ var foodieApp = angular.module('foodieApp',[]);
 
 
 
-
+  $('#myCarousel').carousel({
+    	pause: 'none'
+	})
 
 
 
@@ -20,6 +22,7 @@ foodieApp.controller('mainController',function($scope) {
 	hours:'8 AM to 11 PM (Mon-Sun)',
 	votes:'172',
 	reviews:'200',
+	order: '90min Rs.300',
 	image: 'https://goagrapevinedotcom.files.wordpress.com/2016/06/bv-2.jpg'
 },
 {
@@ -33,6 +36,7 @@ foodieApp.controller('mainController',function($scope) {
 	hours: '12 Noon to 1 AM (Mon-Sun)',
 	votes:'160',
 	reviews:'700',
+	order: '30min Rs.250',
 	image: 'https://tinyurl.com/y75bq4es'
 },
 {
@@ -46,6 +50,7 @@ foodieApp.controller('mainController',function($scope) {
 	hours: '11:30 AM to 11 PM (Mon-Sun)',
 	votes:'152',
 	reviews:'160',
+	order: '50min Rs.600',
 	image: 'https://tinyurl.com/y8yv8pnv'
 },
 {
@@ -59,6 +64,7 @@ foodieApp.controller('mainController',function($scope) {
 	hours: '10 AM to 9 PM (Mon-Sun)',
 	votes:'220',
 	reviews:'580',
+	order: '35min Rs.320',
 	image: 'https://tinyurl.com/y9fjpwqy'
 },
 {
@@ -72,6 +78,7 @@ foodieApp.controller('mainController',function($scope) {
 	hours: '11 AM to 11 PM (Mon-Sun)',
 		votes:'272',
 	reviews:'450',
+	order: '40min Rs.230',
 	image: 'https://tinyurl.com/y9uxhm89'
 },
 {
@@ -85,6 +92,7 @@ foodieApp.controller('mainController',function($scope) {
 	hours: '11 AM to 11 PM (Mon-Sun)',
 		votes:'197',
 	reviews:'247',
+	order: '60min Rs.430',
 	image: 'https://tinyurl.com/y766q8ll'
 },
 {
@@ -98,6 +106,7 @@ foodieApp.controller('mainController',function($scope) {
 	hours: '7 AM to 10 AM, 12 Noon to 3:30 PM, 7 PM to 11:30 PM',
 		votes:'453',
 	reviews:'345',
+	order: '20min Rs.140',
 	image: 'https://tinyurl.com/y739eosa'
 },
 {
@@ -111,6 +120,7 @@ foodieApp.controller('mainController',function($scope) {
 	hours: '11 AM to 11 PM (Mon-Sun)',
     votes:'332',
 	reviews:'140',
+	order: '55min Rs.630',
 	image: 'https://tinyurl.com/y7ax5h7h'
 }
 ]
