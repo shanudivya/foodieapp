@@ -5,7 +5,8 @@ $('#myCarousel').carousel({
     pause: 'none'
 })
 
-foodieApp.controller('restaurantController',function($scope,$routeParams) {
+foodieApp.controller('restaurantController',function($scope,$routeParams,$http) {
+  $scope.ingredients = [];
 	$scope.restaurantId = $routeParams.id;
   var restaurants = [{
  	name: 'Black Vanilla Goa',
@@ -133,7 +134,40 @@ foodieApp.controller('restaurantController',function($scope,$routeParams) {
  }
  ]
   $scope.restaurant = restaurants[$routeParams.id - 1];
-
+  $scope.getIngredients = function(url) {
+    var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}' //json object
+      $http({
+          'method': 'POST',   // we are passing the type of http example:- GET POST etc
+          'url': 'https://api.clarifai.com/v2/models/bd367be194cf45149e75f01d59f77ba7/outputs', //API url
+          'headers': {  //extra information to server
+              'Authorization': 'Key a00462778b594eeca109f59c344884af',//here we write key
+              'Content-Type': 'application/json'// it tells the browser that which type of format of data
+          },
+          'data': data,                            // here we put actual data
+      //    success: function (response) {            //run the request successfully
+      //         var ingredients = response.outputs[0].data.concepts;//it can store the ingredients  recieved from server
+      //         var list = '';
+      //         for (var i =0;i < ingredients.length;i++) {
+      //             list += '<div class="ingredient">' + ingredients[i].name + '</div>'
+      //         }
+      //         $('.ingredients').html(list);
+      //     },
+      //     error: function (xhr) {
+      //         console.log(xhr);
+      //     }
+      // })
+})
+.then(function success(response) {
+  var ingredients = response.data.outputs[0].data.concepts;
+  	for (var i =0;i < ingredients.length;i++) {
+  	$scope.ingredients.push(ingredients[i].name);
+  	}
+  console.log(list);
+},
+function error(xhr) {
+    console.log(xhr);
+  });
+}
 })
 
 
@@ -189,7 +223,7 @@ foodieApp.controller('mainController',function($scope) {
 	vote: '3.9',
 	cuisines: 'Cafe, French',
 	cost:'700',
-  id:1;
+  id:1,
 	hours:'8 AM to 11 PM (Mon-Sun)',
 	votes:'172',
 	reviews:'200',
@@ -204,7 +238,7 @@ foodieApp.controller('mainController',function($scope) {
 	vote: '3.6',
 	cuisines: 'Chinese, Thai',
 	cost: '600',
-  id:2;
+  id:2,
 	hours: '12 Noon to 1 AM (Mon-Sun)',
 	votes:'160',
 	reviews:'700',
@@ -219,7 +253,7 @@ foodieApp.controller('mainController',function($scope) {
 	vote: '3.5',
 	cuisines: 'North Indian',
 	cost: '1000',
-  id:3;
+  id:3,
 	hours: '11:30 AM to 11 PM (Mon-Sun)',
 	votes:'152',
 	reviews:'160',
@@ -234,7 +268,7 @@ foodieApp.controller('mainController',function($scope) {
 	vote: '-',
 	cuisines: 'Desserts',
 	cost: '300',
-  id:4;
+  id:4,
 	hours: '10 AM to 9 PM (Mon-Sun)',
 	votes:'220',
 	reviews:'580',
@@ -249,7 +283,7 @@ foodieApp.controller('mainController',function($scope) {
 	vote: '4.1',
 	cuisines: 'Cafe, Italian, Mexican, Bakery',
 	cost: '1400',
-  id:5;
+  id:5,
 	hours: '11 AM to 11 PM (Mon-Sun)',
 		votes:'272',
 	reviews:'450',
@@ -264,7 +298,7 @@ foodieApp.controller('mainController',function($scope) {
 	vote: '3.6',
 	cuisines: 'Pizza, Fast Food',
 	cost: '700',
-  id:6;
+  id:6,
 	hours: '11 AM to 11 PM (Mon-Sun)',
 		votes:'197',
 	reviews:'247',
@@ -279,7 +313,7 @@ foodieApp.controller('mainController',function($scope) {
 	vote: '4.3',
 	cuisines: 'North Indian, Chinese, Continental, Thai',
 	cost: '1500',
-  id:7;
+  id:7,
 	hours: '7 AM to 10 AM, 12 Noon to 3:30 PM, 7 PM to 11:30 PM',
 		votes:'453',
 	reviews:'345',
@@ -294,7 +328,7 @@ foodieApp.controller('mainController',function($scope) {
 	vote: '3.7',
 	cuisines: 'Chinese, North Indian',
 	cost: '700',
-  id:8;
+  id:8,
 	hours: '11 AM to 11 PM (Mon-Sun)',
     votes:'332',
 	reviews:'140',
