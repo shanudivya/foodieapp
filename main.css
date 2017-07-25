@@ -162,7 +162,7 @@ body {
     margin:-1px;
     text-align: center;
 	color: #333;
-    
+
 }
 .book{
 	color: #00aacd!important;
@@ -173,7 +173,7 @@ body {
 .icon{
 	height:15px;
 	width:15px;
-	
+
 }
 .price
 {
@@ -211,7 +211,7 @@ html,body {
 	background-size:cover;
 	z-index:0;
 }
- 
+
 #content-wrapper {
 	position:absolute;
 	z-index:1 !important;
@@ -229,7 +229,7 @@ html,body {
     padding: 90px 0 25px 0;
     transform-origin: 50% 100%;
     text-shadow: 2px 2px 2px #333;
-     
+
     animation-duration: 4s;
     animation-name: fade;
     animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
@@ -255,4 +255,14 @@ html,body {
         opacity: 1;
         transform: scale(1, 1);
     }
+}
+
+
+.bestDish .button {
+    display: inline-block;
+    background-color:#cb202d;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
 }
