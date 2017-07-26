@@ -159,9 +159,37 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 })
 .then(function success(response) {
   var ingredients = response.data.outputs[0].data.concepts;
+  var list='';
+  var protein=['egg','chicken','oats','cheese','yogurt','milk','brocolo','tuna','lentil','fish','shrimp'];
+  var fat=['flaxseed','almond','oil','avocado','walnuts','peanut','cashew','dark chocolate'];
   	for (var i =0;i < ingredients.length;i++) {
   	$scope.ingredients.push(ingredients[i].name);
   	}
+
+    for(var i=0;i<protein.length;i++){
+     //check for the protein or carb or fat rich foodieApp
+     //console.log($scope.protein);
+     if($scope.ingredients.indexOf(protein[i])>-1){
+       var info ="<p>Protein Rich </p>";
+       console.log("run");
+       $(".rest-extra .best-dish").append(info);
+       $(".highlight-info").css("background-color","green");
+       break;
+     }
+     else if($scope.ingredients.indexOf(fat[i])>-1){
+       var info2 ="<p class='highlight-info'>Fat Rich</p>";
+        console.log("fat rich");
+        $(".type .best-dish").append(info2);
+        $(".highlight-info").css("background-color","yellow");
+        break;
+
+     }
+
+    }
+
+
+
+
   console.log(list);
 },
 function error(xhr) {
