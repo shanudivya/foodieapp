@@ -212,12 +212,6 @@ html,body {
 	z-index:0;
 }
 
-#content-wrapper {
-	position:absolute;
-	z-index:1 !important;
-	min-width:100%;
-	min-height:100%;
-}
 
 
 .banner_animate h2 {

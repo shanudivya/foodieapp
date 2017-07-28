@@ -1,3 +1,5 @@
+
+<!--- - - -MAIN PAGE STARTS HERE --------------------------------------------------------------------------------------------------------->
 <div class="main" ng-controller="mainController">
   <nav class="navbar navbar-default navbar-fixed">
     <div class="container-fluid">
@@ -61,7 +63,7 @@
 
   <div class="ui container">
     <div class="hero">
-
+<!-----------------------------------image slider---------------------->
             <div id="background-carousel">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -76,6 +78,7 @@
       <div class="item" style="background-image:url(https://tinyurl.com/yaawot2k)"></div>
       </div>
     </div>
+
   </div>
 
 
@@ -90,6 +93,10 @@
       </div>
       <p>Find the best restaurants in town</p>
     </div>
+
+
+
+<!-----------------------------search-bar-------------------------->
           <div class="search-bar">
       <form>
 
@@ -100,7 +107,10 @@
       </form>
       </div>
 
+
+<!---------------------------------restaurant information----------------------------->
     <div ng-repeat="restaurant in restaurants | filter:query" class="restaurant">
+      <!------------------------------showing image,location of restaurant------------------------>
         <div class="rest-wrapper">
            <div class="image">
               <img src="{{restaurant.image}}" height="100" width="100">
@@ -122,9 +132,10 @@
               {{restaurant.address}}
             </div>
         </div>
+
 </div>
 
-
+<!-----------------------------showing the cost nd timmings-------------------------->
     <div class="rest-extra">
       <div class="type">
         <div><small>Cuisines:</small></div>
@@ -141,19 +152,20 @@
       </div>
     </div>
 
-
+<!-----------------------------------rating of restaurant-------------------------->
 <div class="rating">
   <strong>{{restaurant.vote}}</strong>
 
 </div>
+
+<!---------------------------------------reviews nd votes----------------------->
 <div class="voting">
 <div><small> {{restaurant.votes}} Votes </small></div>
 <div class="reviews"><small>{{restaurant.reviews}} Reviews</small></div>
 
 
   </div>
-
-
+<!----------------------------add  list and order of the table menu------------------------->
 
 <ul class="nav nav-pills order">
   <li role="presentation" >
