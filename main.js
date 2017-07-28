@@ -178,9 +178,9 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
      }
      else if($scope.ingredients.indexOf(fat[i])>-1){
        var info2 ="<p class='highlight-info'>Fat Rich</p>";
-        console.log("fat rich");
+      console.log("fat rich");
         $(".type .best-dish").append(info2);
-        $(".highlight-info").css("background-color","yellow");
+        $(".rest-extra").css("background-color","yellow");
         break;
 
      }
@@ -190,7 +190,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 
 
 
-  console.log(list);
+  //console.log(list);
 },
 function error(xhr) {
     console.log(xhr);
