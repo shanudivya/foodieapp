@@ -1,9 +1,6 @@
 var foodieApp = angular.module('foodieApp',['ngRoute']);
 // console.log(foodieApp);
 
-$('#myCarousel').carousel({
-    pause: 'none'
-})
 
 foodieApp.controller('restaurantController',function($scope,$routeParams,$http) {
   $scope.ingredients = [];
@@ -243,6 +240,10 @@ foodieApp.config(function ($routeProvider) {
 
 
 foodieApp.controller('mainController',function($scope) {
+  $('#myCarousel').carousel({
+      pause: 'none'
+  })
+
  $scope.restaurants = [{
 	name: 'Black Vanilla Goa',
 	address: 'S-4, Ground floor, Landscape Excelsior Building, DB Road',
