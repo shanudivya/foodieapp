@@ -236,13 +236,13 @@ foodieApp.config(function ($routeProvider) {
     }
      })
 
+     foodieApp.controller('mainController',function($scope) {
+       $('#myCarousel').carousel({
+           pause: 'none'
+       })
 
 
 
-foodieApp.controller('mainController',function($scope) {
-  $('#myCarousel').carousel({
-      pause: 'none'
-  })
 
  $scope.restaurants = [{
 	name: 'Black Vanilla Goa',
