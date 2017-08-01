@@ -15,7 +15,7 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
  	cost:'700',
   id:1,
  	hours:'8 AM to 11 PM (Mon-Sun)',
-  bestDish: {
+  bestDish: {                                   //information about the recommended dish
 	name: 'Corn Pizza',
 	image: 'http://noblepig.com/images/2016/06/Avocado-and-Three-Bean-Salad-is-perfect-for-a-summertime-barbecue-side-dish.JPG'
 },
